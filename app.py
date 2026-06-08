@@ -44,28 +44,75 @@ with st.sidebar:
 # ==========================================
 # PAGE 1 : QUI SUIS-JE ?
 # ==========================================
+# ==========================================
+# PAGE 1 : QUI SUIS-JE ? (Optimisé Recruteurs)
+# ==========================================
 if choix == "Qui suis-je ?":
-    st.title("👤 Mon Profil")
-    st.write("Bienvenue sur mon profil.")
+    st.title("👤 Mon Profil & Compétences")
     
+    # Header avec une accroche forte
+    st.markdown("""
+    ## **Data Analyst | Passionné par le Data Engineering & la Production**
+    > *Je combine la rigueur de l'analyse de données avec les bonnes pratiques d'ingénierie pour créer des solutions robustes, automatisées et scalables.*
+    """)
+    
+    st.divider() # Petite ligne de séparation propre
+
+    # Layout en 2 colonnes
     col1, col2 = st.columns([2, 1])
 
     with col1:
-        st.markdown("""
-        ### 🎯 Mon Objectif
-        Data Analyst fraîchement diplômé avec une forte appétence pour le **Data Engineering**. 
-        Je ne me contente pas d'analyser les données, je m'assure qu'elles coulent de source de manière fiable et automatisée.
+        st.markdown("### 🎯 À propos de moi")
+        st.write("""
+        Fraîchement diplômé d'un cursus intensif en Data Analyse, j'ai rapidement développé une forte affinité pour l'envers du décor : **l'architecture et la fiabilisation des données**. 
+        
+        Mon objectif est de rejoindre une équipe où je peux non seulement faire parler les données à travers des dashboards d'aide à la décision, mais aussi participer à la mise en place de pipelines ETL fluides, à la conteneurisation des applications et à leur déploiement.
+        
+        *Ce portfolio (entièrement codé en Python et déployé par mes soins) illustre ma capacité à mener un projet data de la donnée brute jusqu'à la mise en production d'un modèle prédictif.*
         """)
         
-        with st.expander("🎓 Ma Formation"):
-            st.write("""
-            - **Formation Data Analyst** (3 mois intensifs)
-            - Focus : SQL, Python, ETL, Machine Learning, Docker
+        # Section Formations & Expériences en accordéons
+        with st.expander("🎓 Ma Formation & Certifications"):
+            st.markdown("""
+            - **Formation Certifiante Data Analyst** (Bootcamp intensif - 3 mois)
+              * *Projets pratiques : Nettoyage de données complexes, modélisation ML, architecture de pipelines.*
+            - **Auto-formation continue** : Focus sur Docker, Linux, Git avancés et le Cloud (AWS/GCP).
+            """)
+            
+        with st.expander("🤝 Mes Soft Skills (Qualités humaines)"):
+            st.markdown("""
+            - **Esprit Critique & Scientifique** : Capacité à remettre en question les résultats d'un modèle (comme l'extrapolation du Random Forest sur ce portfolio !).
+            - **Autonomie & Résilience** : Curiosité technique poussée pour résoudre les bugs de déploiement et d'infrastructure.
+            - **Communication transverse** : Capacité à traduire des problématiques algorithmiques complexes en insights business clairs pour des profils non-techniques.
             """)
 
     with col2:
-        st.info("**Technos préférées**")
-        st.markdown("- 🐍 Python\n- 🐳 Docker\n- 🤖 Scikit-Learn")
+        st.info("💡 **Hard Skills (Technos)**")
+        
+        st.markdown("**Langages & Analyse**")
+        st.markdown("- 🐍 Python (Pandas, NumPy, Scikit-Learn)\n- 🛢️ SQL (PostgreSQL, MySQL)")
+        
+        st.markdown("**Dataviz & Front**")
+        st.markdown("- 📊 Plotly & Seaborn\n- 🎈 Streamlit")
+        
+        st.markdown("**DevOps & Data Engineering**")
+        st.markdown("- 🐳 Docker (Conteneurisation)\n- 🐙 Git / GitHub (Versionning & CI/CD)\n- ⚙️ Pipelines ETL & Automatisation")
+        
+        st.divider()
+        
+        # BONUS : Un bouton d'appel à l'action pour les recruteurs
+        st.markdown("### 📄 Mon CV")
+        # Note : pour que le bouton marche, il faudrait mettre ton fichier CV.pdf dans le même dossier sur GitHub
+        try:
+            with open("CV.pdf", "rb") as pdf_file:
+                PDFbyte = pdf_file.read()
+            st.download_button(label="📥 Télécharger mon CV (PDF)",
+                               data=PDFbyte,
+                               file_name="CV_Mon_Nom.pdf",
+                               mime='application/octet-stream',
+                               use_container_width=True)
+        except FileNotFoundError:
+            st.warning("Ajoutez un fichier 'CV.pdf' dans votre dossier GitHub pour activer le bouton de téléchargement !")
 
 
 # ==========================================
@@ -185,4 +232,4 @@ elif choix == "Mes projets":
 # ==========================================
 elif choix == "Contact":
     st.title("📩 Contact")
-    st.write("Mon email : test@gmail.com")
+    st.write("Mon email : bsacuto@gmail.com")
