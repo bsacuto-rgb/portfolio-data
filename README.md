@@ -1,25 +1,40 @@
-# portfolio-data
-Là où je montre mes compètences.
+HEAD
+# portfolio-data_2.0
+Lieux ou je vais hébergé mon nouveau streamlit.
+=======
+🚀 Portfolio Data : Baptiste Sacuto
 
-# 📊 Portfolio Data Analyst & Engineering
+Bienvenue sur mon espace de travail. Ce dépôt contient mon portfolio interactif, construit avec Streamlit, mettant en avant mes compétences en Data Engineering et Data Science.
+🛠️ Stack Technique
 
-Ceci est mon portfolio interactif développé avec **Streamlit** et conteneurisé avec **Docker**.
+    Langages & Libs : Python (Pandas, NumPy, Scikit-Learn), Streamlit.
 
-## 🚀 Objectif
-Démontrer mes compétences en cycle de vie de la donnée : de l'extraction (APIs/Kaggle) jusqu'au déploiement en production.
+    Data Engineering : ETL, PostgreSQL, AWS (RDS/S3).
 
-## 🛠️ Stack Technique
-- **Interface :** Streamlit
-- **Traitement :** Pandas, Python 3.10
-- **DevOps :** Docker, GitHub Actions
-- **Cloud :** Streamlit Cloud
+    Visualisation : Power BI, Plotly.
 
-## 🏗️ Structure du Projet
-- `app.py` : Application principale
-- `Dockerfile` : Configuration pour la conteneurisation
-- `requirements.txt` : Dépendances du projet
+    Infrastructure : Déploiement Cloud (Streamlit Cloud).
 
-## ⚙️ Installation Locale (Docker)
-```bash
-docker build -t portfolio-app .
-docker run -p 8501:8501 portfolio-app
+📁 Contenu du Portfolio
+1. 🛡️ Analyse : Sécurité Routière (2021-2024)
+
+Projet orienté Data Engineering.
+
+    Objectif : Fiabiliser et analyser les données BAAC (ONISR).
+
+    Architecture : Pipeline médaillon (Bronze -> Silver -> Gold) avec stockage sur AWS RDS.
+
+2. 🌍 Simulation Climatique & IA
+
+Projet orienté Data Science / Machine Learning.
+
+    Objectif : Prédire l'évolution des émissions de CO2 par habitant.
+
+    Modélisation : Entraînement d'un modèle Random Forest Regressor pour simuler différents scénarios énergétiques.
+
+🔗 Liens
+
+    Mon Portfolio en ligne
+
+    Mon LinkedIn
+
